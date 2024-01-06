@@ -1,0 +1,188 @@
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  margin-top: -5px 0px;
+  margin-bottom: 50px;
+  background: #0056b3;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  border: 1px solid rgb(0, 0, 0);
+}
+.anhconten{
+  
+  margin-left: -80%;
+}
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.main {
+  padding: 20px;
+}
+
+.logout{
+  font-size: 1.2rem;
+  margin-top: -30px;
+  margin-left: 75%;
+  
+  display: flex;
+} 
+
+.ten{
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+a{
+  font-size: 1.2rem;
+}
+
+/* h2{
+  margin-left: -70%;
+  font-size: 30px;
+  color: rgb(201, 177, 177);
+} */
+
+
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* .list_mxh img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+
+.contact-info>p {
+  margin: 4px 0;
+}
+
+@media screen and (max-width: 768px) {
+
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
+
+
+footer {
+  background-color: #26a040;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-main {
+  flex: 7;
+}
+
+.name-name {
+  font-size: 24px !important;
+  color: #ed3237;
+  text-shadow: -0.5px 0 0px #fff, 0.5px 0px 0 #fff, 0 -0.5px 0 #fff, 0 0.5px 0 #fff;
+}
+
+
+.footer-side {
+  flex: 3;
+  text-align: right;
+}
+
+
+.copy {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-main,
+  .footer-side {
+    width: 100%;
+    margin-bottom: 10px;
+    
+  }
+
+  .footer-side {
+    order: -1;
+    
+  }
+}
+
+.social-icons {
+  margin-top: -100px;
+  text-align: right;
+  padding: 0;
+  list-style: none;
+}
+
+.social-icons a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}
+
+.copy {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+
+.social-icons {
+  margin-top: -100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  list-style: none;
+}
+
+.social-icons a {
+  color: inherit;
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+
+.social-icons a[href*="facebook.com"] i {
+
+  color: #4267B2;
+}
+
+.social-icons a[href*="youtube.com"] i {
+  color: #FF0000;
+}
+
+.social-icons a[href*="zalo.me"] i {
+  color: #0088cc;
+} */

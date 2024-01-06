@@ -1,0 +1,173 @@
+ <head>
+    <link rel="stylesheet" href="/css/thongtinsv.css">
+    <title>Huy Điền DNC</title>
+ </head>
+ 
+ 
+ <body>
+    <header>
+        <!-- <h1>Cổng Thông Tin Sinh Viên</h1> -->
+        <nav>
+          <a href="./home.html">Trang chủ</a>
+          <a href="#">Thông tin sinh viên</a>
+          <a href="#">Lớp học</a>
+          <a href="khoahoc.html">Khóa học</a>
+        </nav>
+      </header>
+
+      <body>
+        <h1>Danh sách sinh viên</h1>
+        <ul id="student-list">
+          <li><a href="#" onclick="showStudentInfo('student1')">Nguyễn Huy Điền</a></li>
+          <li><a href="#" onclick="showStudentInfo('student2')">Phạm Minh Thuận</a></li>
+          <li><a href="#" onclick="showStudentInfo('student3')">Trần Huỳnh Đức</a></li>
+          <li><a href="#" onclick="showStudentInfo('student4')">Bùi Lâm Kha</a></li>
+        </ul>
+      
+        <div id="student-info"></div>
+      
+        <script>
+          function showStudentInfo(studentName) {
+            // Lấy thông tin sinh viên từ tên
+            var studentInfo = getStudentInfo(studentName);
+      
+            // Hiển thị thông tin sinh viên
+            var studentInfoDiv = document.getElementById('student-info');
+            studentInfoDiv.innerHTML = '<h2>Thông tin sinh viên</h2>' +
+                                       '<p>Tên: ' + studentInfo.name + '</p>' +
+                                       '<p>Mã sinh viên: ' + studentInfo.studentId + '</p>' +
+                                       '<p>Lớp: ' + studentInfo.class + '</p>' +
+                                       '<p>Mail: ' + studentInfo.mail + '</p>';
+          }
+      
+          function getStudentInfo(studentName) {
+            // Đoạn này bạn có thể lấy thông tin sinh viên từ nguồn dữ liệu nào đó, ví dụ: cơ sở dữ liệu, file JSON, API, ...
+            // Trong ví dụ này, tôi sẽ hardcode thông tin sinh viên để minh họa
+            var studentInfo = {};
+      
+            if (studentName === 'student1') {
+              studentInfo.name = 'Nguyễn Huy Điền';
+              studentInfo.studentId = '226514';
+              studentInfo.class = 'DH22TIN06';
+              studentInfo.mail = 'nguyenhuydien147@gmail.com';
+              
+            } else if (studentName === 'student2') {
+              studentInfo.name = 'Phạm Minh Thuận';
+              studentInfo.studentId = '221247';
+              studentInfo.class = 'DH22OTO5';
+              studentInfo.mail = 'minhthuan.tgdd2004@gmail.com';
+
+            } else if (studentName === 'student3') {
+              studentInfo.name = 'Trần Huỳnh Đức';
+              studentInfo.studentId = '220947';
+              studentInfo.class = 'DH22TIN06';
+            }
+            
+            else if (studentName === 'student4') {
+              studentInfo.name = 'Bùi Lâm Kha';
+              studentInfo.studentId = '221629';
+              studentInfo.class = 'DH22TIN06';
+              studentInfo.mail = 'builamkha29536@gmail.com';
+            }
+
+            
+      
+            return studentInfo;
+          }
+        </script>
+      </body>
+      </html>
+    <!-- <section class="content">
+        <h2>Thông tin sinh viên</h2>
+        <table>
+  
+          <thead>
+            <tr>
+              <th>Thông tin</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mã sinh viên</td>
+              <td>226514</td>
+            </tr>
+            <tr>
+              <td>Họ và tên</td>
+              <td>Nguyễn Huy Điền</td>
+            </tr>
+            <tr>
+              <td>Ngày sinh</td>
+              <td>12/01/2003</td>
+            </tr>
+            <tr>
+              <td>Giới tính</td>
+              <td>Nam</td>
+            </tr>
+            <tr>
+              <td>Khoa</td>
+              <td>Công Nghệ Thông Tin</td>
+            </tr>
+            <tr>
+              <td>Lớp</td>
+              <td>DH22TIN06</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>nguyenhuydien147@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Số điện thoại</td>
+              <td>0945700813</td>
+            </tr>
+            <tr>
+              <td>Địa chỉ</td>
+              <td>365/3 Khu vực 6, Phường An Khánh, Quận Ninh Kiều, Thành Phố Cần Thơ</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content">
+        <h2>Lớp học</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Thông tin</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mã lớp</td>
+              <td>DH22TIN06</td>
+            </tr>
+            <tr>
+              <td>Tên lớp</td>
+              <td>Lập trình cơ bản</td>
+            </tr>
+            <tr>
+              <td>Mã học phần</td>
+              <td>10100007311</td>
+            </tr>
+            <tr>
+              <td>Tên học phần</td>
+              <td>Lập trình văn bản Thực hành</td>
+            </tr>
+            <tr>
+              <td>Giảng viên</td>
+              <td>Điền tập code</td>
+            </tr>
+            <tr>
+              <td>Thời gian học</td>
+              <td>Thứ 2, 4, 6 - 7h30 - 9h30</td>
+            </tr>
+            <tr>
+              <td>Địa điểm học</td>
+              <td>Phòng I3 03</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+ </body>
+  -->
