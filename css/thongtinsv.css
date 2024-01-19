@@ -6,24 +6,33 @@ body {
   margin: 0;
   padding: 0;
 }
-header {
+/* header {
+  max-width:100%;
+  height: 30px;
+  margin-top: -5px 0px;
+ 
+  margin-bottom: 100px;
   background: #0056b3;
   color: #fff;
   padding: 1rem 0;
   text-align: center;
-}
+  border: 1px solid rgb(0, 0, 0);
+} */
 
 nav a {
   color: #fff;
   margin: 0 10px;
   text-decoration: none;
 }
-
+#student-list, #student-info, h1{
+  padding-left: 20px;
+}
 ul {
+  
   list-style-type: none;
 }
 
-/* .content {
+.content {
     background: #fff;
     padding: 20px;
     margin-bottom: 20px;
@@ -44,4 +53,6 @@ ul {
   td {
     padding: 10px;
     text-align: left;
-  } */
+  }
+
+  

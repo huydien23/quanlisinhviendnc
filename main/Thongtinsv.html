@@ -1,27 +1,58 @@
  <head>
     <link rel="stylesheet" href="/css/thongtinsv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Huy Điền DNC</title>
  </head>
  
  
  <body>
-    <header>
-        <!-- <h1>Cổng Thông Tin Sinh Viên</h1> -->
-        <nav>
-          <a href="./home.html">Trang chủ</a>
-          <a href="#">Thông tin sinh viên</a>
-          <a href="#">Lớp học</a>
-          <a href="khoahoc.html">Khóa học</a>
-        </nav>
-      </header>
-
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./home.html">Quản Lí Sinh Viên </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./home.html">Trang chủ</a>
+              
+              <i class="fa-solid fa-house">
+            </i>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Thông tin sinh viên</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./khoahoc.html">Khóa học</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Admin
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Cài đặt</a></li>
+                <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+                <li><a class="dropdown-item" href="../index.html">Đăng xuất</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </header>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
       <body>
         <h1>Danh sách sinh viên</h1>
         <ul id="student-list">
-          <li><a href="#" onclick="showStudentInfo('student1')">Nguyễn Huy Điền</a></li>
-          <li><a href="#" onclick="showStudentInfo('student2')">Phạm Minh Thuận</a></li>
-          <li><a href="#" onclick="showStudentInfo('student3')">Trần Huỳnh Đức</a></li>
-          <li><a href="#" onclick="showStudentInfo('student4')">Bùi Lâm Kha</a></li>
+          <li><a style="text-decoration: none; color: black;" href="#" onclick="showStudentInfo('student1')">Nguyễn Huy Điền</a></li>
+          <li><a style="text-decoration: none; color: black;" href="#" onclick="showStudentInfo('student2')">Phạm Minh Thuận</a></li>
+          <!-- <li><a style="text-decoration: none; color: black;" href="#" onclick="showStudentInfo('student3')">Trần Huỳnh Đức</a></li> -->
+          <!-- <li><a style="text-decoration: none; color: black;" href="#" onclick="showStudentInfo('student4')">Bùi Lâm Kha</a></li> -->
+          <!-- <li><a style="text-decoration: none; color: black;" href="#" onclick="showStudentInfo('student5')">Nguyễn Thanh Sơn</a></li> -->
+          <!-- <li><a style="text-decoration: none; color: black;" href="#" onclick="showStudentInfo('student6')">Vũ TrapBoi</a></li> -->
         </ul>
       
         <div id="student-info"></div>
@@ -37,7 +68,9 @@
                                        '<p>Tên: ' + studentInfo.name + '</p>' +
                                        '<p>Mã sinh viên: ' + studentInfo.studentId + '</p>' +
                                        '<p>Lớp: ' + studentInfo.class + '</p>' +
-                                       '<p>Mail: ' + studentInfo.mail + '</p>';
+                                       '<p>Năm sinh: ' + studentInfo.year + '</p>' +
+                                       '<p>Mail: ' + studentInfo.mail + '</p>' +
+                                       '<p>Quê quán: ' + studentInfo.map + '</p>';
           }
       
           function getStudentInfo(studentName) {
@@ -49,28 +82,44 @@
               studentInfo.name = 'Nguyễn Huy Điền';
               studentInfo.studentId = '226514';
               studentInfo.class = 'DH22TIN06';
+              studentInfo.year = '12/01/2003';
               studentInfo.mail = 'nguyenhuydien147@gmail.com';
+              studentInfo.map = 'Kiên Giang';
               
             } else if (studentName === 'student2') {
               studentInfo.name = 'Phạm Minh Thuận';
               studentInfo.studentId = '221247';
               studentInfo.class = 'DH22OTO5';
+              studentInfo.year = '12/12/2004';
               studentInfo.mail = 'minhthuan.tgdd2004@gmail.com';
-
+              studentInfo.map = 'Kiên Giang';
+              
             } else if (studentName === 'student3') {
               studentInfo.name = 'Trần Huỳnh Đức';
               studentInfo.studentId = '220947';
               studentInfo.class = 'DH22TIN06';
+              studentInfo.year = '25/05/2004';
+              studentInfo.mail = 'tranhuynhduc123@gmail.com';
+              studentInfo.map = 'Hậu Giang';
             }
             
             else if (studentName === 'student4') {
               studentInfo.name = 'Bùi Lâm Kha';
               studentInfo.studentId = '221629';
               studentInfo.class = 'DH22TIN06';
+              studentInfo.year = '26/08/2004';
               studentInfo.mail = 'builamkha29536@gmail.com';
+              studentInfo.map = 'Đồng Tháp';
             }
-
             
+            else if (studentName === 'student5') {
+              studentInfo.name = 'Nguyễn Thanh Sơn';
+              studentInfo.studentId = '222156';
+              studentInfo.class = 'DH22TIN06';
+              studentInfo.year = '19/10/2004';
+              studentInfo.mail = 'nguyenthanhson222156@gmail.com';
+              studentInfo.map = 'An Giang';
+            }
       
             return studentInfo;
           }
